@@ -18,6 +18,23 @@ Instead of sending keys manually or exposing them publicly on GitHub, you can en
 
 ## Getting started
 
-### 1. Initialize git-crypt
+### 1. Download git-crypt
 ```bash
-git-crypt init
+PowerShell
+Set-ExecutionPolicy RemoteSigned -scope CurrentUser
+irm get.scoop.sh | iex
+```
+
+### 2. Initialize git-crypt
+```bash
+scoop install git-crypt
+
+```
+
+### 3. Verity git-crypt version
+```bash
+git-crypt --version
+```
+
+## prepare file
+### touch .gitattributes
