@@ -56,9 +56,6 @@ git-crypt status
 
 ### Now we must understand that there are two methods to encrypt data, and we need to distinguish between them.
 
-## First Method: Key-Based
-From its name, this method is based on a key file that you must have in order to decrypt your data.
- 
 ### in both Method you add .gitattributes
 ``` bash 
 touch .gitattributes
@@ -79,7 +76,11 @@ touch .gitattributes
 ``` bash 
 <folder-name>/**  filter=git-crypt    diff=git-crypt
 ```
+---
 
+## First Method: Key-Based
+From its name, this method is based on a key file that you must have in order to decrypt your data.
+ 
 
 ### 1.Initialize git-crypt
 
