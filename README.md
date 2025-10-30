@@ -101,3 +101,43 @@ git-crypt export-key ./git-crypt.key
 ```bash 
 git-crypt unlock ./git-crypt.key
 ```
+
+## To be honest, this method has both advantages and disadvantages.  
+It’s not always practical every time you encrypt or decrypt, you need to use the key manually.  
+Yes, it’s only one command, but what if there’s an automatic way to handle that?  
+Of course, you would choose the automatic one if it exists.
+
+## Second Method: GPG key pair
+
+### 1.Initialize git-crypt
+
+```bash 
+git-crypt init
+
+```
+### 2. See status and what are encrypted
+```bash
+ git-crypt status
+ ```
+
+### 3. create GPG key:
+```bash
+gpg --full-generate-key 
+```
+
+### 4. decrypt data by key
+```bash 
+git-crypt unlock  
+```
+### 5.list available key
+```bash
+gpg --list-secret-keys 
+```
+### 6. add new user 
+```bash
+git-crypt add-gpg-user <user@email.com>   
+```
+
+
+
+
